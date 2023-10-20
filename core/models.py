@@ -9,7 +9,7 @@ class Book(models.Model):
     genre = models.CharField(max_length=50, verbose_name='Жанр')
     language = models.CharField(max_length=20, verbose_name='Язык')
     page_count = models.PositiveIntegerField(verbose_name='Количество страниц')
-    cover_image = models.ImageField(upload_to='book_covers/', verbose_name='Обложка')
+    cover_image = models.ImageField(upload_to='book_covers/', blank=True, null=True, verbose_name='Обложка')
 
     def __str__(self):
         return self.title
