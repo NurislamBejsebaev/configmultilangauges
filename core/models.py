@@ -5,7 +5,7 @@ class Book(models.Model):
     title = models.CharField(max_length=100, verbose_name='Название книги')
     author = models.CharField(max_length=50, verbose_name='Автор')
     publication_date = models.DateField(verbose_name='Дата публикации')
-    isbn = models.CharField(max_length=13, unique=True, verbose_name='ISBN')
+    isbn = models.CharField(max_length=20, unique=True, verbose_name='ISBN')
     genre = models.CharField(max_length=50, verbose_name='Жанр')
     language = models.CharField(max_length=20, verbose_name='Язык')
     page_count = models.PositiveIntegerField(verbose_name='Количество страниц')
