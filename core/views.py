@@ -4,7 +4,6 @@ from .models import Book
 from .serializers import BookSerializer
 from .filters import BookFilter
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters
 
 
 class BookViewSet(viewsets.ModelViewSet):
@@ -19,4 +18,3 @@ class BookViewSet(viewsets.ModelViewSet):
         # Передайте параметры фильтрации, если они есть
         queryset = BookFilter(self.request.GET, queryset=super().get_queryset(), request=self.request).qs
         return queryset
-
